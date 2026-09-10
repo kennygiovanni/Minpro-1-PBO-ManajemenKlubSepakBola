@@ -1,0 +1,95 @@
+package data_klub;
+
+public class Pemain {
+    private String nama;
+    private String posisi;
+    private int nomorPunggung;
+    private int usia;
+    private String statusKesehatan;
+    
+    public Pemain(String nama, String posisi, int nomorPunggung, int usia, String statusKesehatan) {
+        this.nama = nama;
+        setPosisi(posisi);
+        setNomorPunggung(nomorPunggung);
+        setUsia(usia);
+        setStatusKesehatan(statusKesehatan);
+    }
+
+    public String getNama() {
+        return nama;
+    }
+    public String getPosisi() {
+        return posisi;
+    }
+    public int getNomorPunggung() {
+        return nomorPunggung;
+    }
+    public int getUsia() {
+        return usia;
+    }
+    public String getStatusKesehatan() {
+        return statusKesehatan;
+    }
+    
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+    
+    public void setPosisi(String posisi) {
+        if (posisi.equalsIgnoreCase("GK") ||
+            posisi.equalsIgnoreCase("CB") ||
+            posisi.equalsIgnoreCase("LB") ||
+            posisi.equalsIgnoreCase("RB") ||
+            posisi.equalsIgnoreCase("CDM") ||
+            posisi.equalsIgnoreCase("CM") ||
+            posisi.equalsIgnoreCase("CAM") ||
+            posisi.equalsIgnoreCase("LW") ||
+            posisi.equalsIgnoreCase("RW") ||
+            posisi.equalsIgnoreCase("ST")) {
+            this.posisi = posisi.toUpperCase();
+    }
+        else {
+            this.posisi = "ST";
+            System.out.println("Posisi Tidak Tersedia, diset ke ST.");
+        }
+    }
+    
+    public void setNomorPunggung(int nomorPunggung){
+        if (nomorPunggung >= 1 && nomorPunggung <= 99){
+            this.nomorPunggung = nomorPunggung;
+        }
+        else{
+            this.nomorPunggung = 99;
+            System.out.println("Nomor Punggung harus 1-99, diset ke 99.");
+        }
+    }
+    
+    public void setUsia(int usia){
+        if (usia >= 0){
+            this.usia = usia;
+        }
+        else{
+            this.usia = 0;
+            System.out.println("Usia tidak boleh negatif, diset ke 0.");
+        }
+    }
+    
+    public void setStatusKesehatan(String statusKesehatan){
+        if (statusKesehatan.equalsIgnoreCase("Tersedia") || statusKesehatan.equalsIgnoreCase("Cedera")) {
+            this.statusKesehatan = statusKesehatan.substring(0, 1).toUpperCase() + statusKesehatan.substring(1).toLowerCase();
+        } 
+        else {
+           this.statusKesehatan = "Tersedia";
+           System.out.println("Status kesehatan harus 'Tersedia' atau 'Cedera', diset ke Tersedia.");
+        }
+    }
+   
+    public void tampilkanInfo() {
+        System.out.println("Nama            : " + nama);
+        System.out.println("Posisi          : " + posisi);
+        System.out.println("No. Punggung    : " + nomorPunggung);
+        System.out.println("Usia            : " + usia);
+        System.out.println("Status Kesehatan: " + statusKesehatan);
+        System.out.println("-------------------------------");
+    }   
+}
