@@ -46,7 +46,7 @@ public class Mini_Project {
             System.out.print("Posisi (GK/CB/LB/RB/CDM/CM/CAM/LW/RW/ST: ");
             String posisi = scanner.nextLine();
             
-            System.out.print("Nomor Punggung: (1-99): ");
+            System.out.print("Nomor Punggung (1-99): ");
             while (!scanner.hasNextInt()) {
                 System.out.print("Harus berupa angka");
                 scanner.next();
@@ -79,7 +79,7 @@ public class Mini_Project {
             System.out.print("Masukkan Nama Pemain: ");
             String namaHapus = scanner.nextLine();
             klub.hapusPemain(namaHapus);
-            System.out.print("Pemain Sudah Dihapus");
+            System.out.println("Pemain Sudah Dihapus");
             break;
             
         case 4:
@@ -108,7 +108,7 @@ public class Mini_Project {
             }
             int skorKlub = scanner.nextInt();
             
-            System.out.println("Skor Klub Lawan: ");
+            System.out.print("Skor Klub Lawan: ");
             while (!scanner.hasNextInt()) {
                 System.out.print("Harus Berupa Angka ");
                 scanner.next();

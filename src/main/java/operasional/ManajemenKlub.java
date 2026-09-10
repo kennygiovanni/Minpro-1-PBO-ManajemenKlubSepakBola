@@ -66,7 +66,7 @@ public class ManajemenKlub {
     }
     
     public void tampilkanSemuaPelatih(){
-        if (daftarPemain.isEmpty()){
+        if (daftarPelatih.isEmpty()){
             System.out.println("Belum ada data pelatih.");
             return;
         }

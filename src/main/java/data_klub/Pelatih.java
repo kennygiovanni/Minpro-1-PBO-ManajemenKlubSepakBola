@@ -42,9 +42,9 @@ public class Pelatih {
     }
 
     public void tampilkanInfo() {
-         System.out.println("Nama        :" + nama);
-         System.out.println("Spesialisasi:" + spesialisasi);
-         System.out.println("Pengalaman  :" + pengalaman + "tahun");
+         System.out.println("Nama        : " + nama);
+         System.out.println("Spesialisasi: " + spesialisasi);
+         System.out.println("Pengalaman  : " + pengalaman + " tahun");
          System.out.println("--------------------------");
     }
 }
