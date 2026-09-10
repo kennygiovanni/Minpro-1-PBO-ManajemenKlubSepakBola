@@ -70,7 +70,7 @@ java com.mycompany.mini_project.Mini_Project
 ### 1. Menu Utama
 Tampilan awal program saat pertama kali dijalankan.
 
-![Menu Utama](01-menu-utama.png) 
+![Menu Utama](screenshots/01-menu-utama.png) 
 
 ### 2. Tambah Pemain
 Proses memasukkan data pemain baru hingga berhasil ditambahkan.
